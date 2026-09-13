@@ -5,128 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>If you believe sex determines gender</title>
 <style>
-
+  :root {
+    --ink: #1a1a1a;
+    --soft: #5c5c5c;
+    --faint: #8a8a8a;
+    --rule: #e6e2dc;
+    --paper: #fbfaf8;
+    --accent: #7a5c3e;
+    --accent-soft: #f3ede5;
+  }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
-    background: #fff;
-    color: #222;
-    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
-    font-size: 16px;
-    line-height: 1.5;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
-
-  .page {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 24px 28px 40px;
-  }
-
+  .page { max-width: 680px; margin: 0 auto; padding: 56px 28px 96px; }
+  .nav { font-size: 14px; letter-spacing: 0.02em; margin-bottom: 44px; }
+  .nav a { color: var(--faint); text-decoration: none; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   h1 {
-    font-size: 28px;
-    line-height: 1.25;
-    font-weight: normal;
-    margin-bottom: 4px;
-    color: #000;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 8px;
+    font-size: 38px; line-height: 1.18; font-weight: 400; letter-spacing: -0.015em;
+    margin-bottom: 14px; color: #111;
   }
-
+  .sub { color: var(--soft); font-size: 17px; line-height: 1.6; margin-bottom: 40px; font-style: italic; }
+  h1 + .sub { margin-top: -4px; }
   h2 {
-    font-size: 20px;
-    font-weight: normal;
-    color: #000;
-    margin-top: 22px;
-    margin-bottom: 6px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 4px;
+    font-size: 15px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent); margin: 52px 0 18px; padding-bottom: 9px;
+    border-bottom: 1px solid var(--rule);
   }
-
-  h3 {
-    font-size: 17px;
-    font-weight: bold;
-    color: #000;
-    margin-top: 16px;
-    margin-bottom: 4px;
+  h3 { font-size: 21px; font-weight: 600; margin: 34px 0 10px; letter-spacing: -0.01em; }
+  p { margin-bottom: 19px; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  .term { margin: 0 0 30px; }
+  .term b { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+  .card {
+    background: #fff; border: 1px solid var(--rule); border-radius: 3px;
+    padding: 26px 30px; margin: 0 0 42px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 20px rgba(0,0,0,0.035);
   }
-
-  p {
-    margin-bottom: 10px;
+  .card h3 { margin-top: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  .aside {
+    border-left: 2px solid var(--accent-soft); padding: 2px 0 2px 20px;
+    color: var(--soft); font-size: 16.5px; line-height: 1.65; margin: 0 0 30px;
   }
-
-  .subtitle {
-    font-size: 14px;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 24px;
+  .aside p:last-child { margin-bottom: 0; }
+  ol, ul { margin: 0 0 24px 22px; }
+  li { margin-bottom: 11px; padding-left: 4px; }
+  ol li::marker { color: var(--faint); }
+  .toc { list-style: none; margin: 0; padding: 0; }
+  .toc li { margin-bottom: 30px; padding-left: 0; }
+  .toc a { color: var(--ink); text-decoration: none; font-size: 22px; letter-spacing: -0.01em;
+           border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .toc .d { display: block; color: var(--soft); font-size: 16px; line-height: 1.6; margin-top: 6px; }
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 52px 0; }
+  .foot { color: var(--faint); font-size: 14px; line-height: 1.6; margin-top: 60px;
+          padding-top: 22px; border-top: 1px solid var(--rule); }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .page { padding: 36px 20px 72px; }
+    h1 { font-size: 30px; }
   }
-
-  .infobox {
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 12px 18px;
-    margin: 12px 0;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .infobox p:last-child { margin-bottom: 0; }
-
-  .indent {
-    margin-left: 20px;
-    padding-left: 14px;
-    border-left: 2px solid #ddd;
-    margin-bottom: 10px;
-  }
-
-  .indent p:last-child { margin-bottom: 0; }
-
-  .indent-label {
-    font-size: 14px;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 4px;
-  }
-
-  blockquote {
-    background: #f8f9fa;
-    border-left: 3px solid #aaa;
-    padding: 10px 18px;
-    margin: 12px 0;
-    font-style: italic;
-    color: #444;
-  }
-
-  blockquote p:last-child { margin-bottom: 0; }
-
-  .note {
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 12px 18px;
-    margin: 14px 0;
-    font-size: 14px;
-    color: #555;
-  }
-
-  .note p:last-child { margin-bottom: 0; }
-
-  hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
-  }
-
-  strong { color: #000; }
-
-.nav { font-size: 14px; margin-bottom: 14px; }
-.nav a { color: #36c; text-decoration: none; }
-.nav a:hover { text-decoration: underline; }
-.sub { color: #555; font-size: 15px; margin-bottom: 16px; }
-ul.toc { list-style: none; margin: 0; padding: 0; }
-ul.toc li { margin-bottom: 14px; }
-ul.toc a { color: #36c; text-decoration: none; font-size: 17px; }
-ul.toc a:hover { text-decoration: underline; }
-ul.toc .d { display: block; color: #555; font-size: 14px; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -135,12 +81,7 @@ ul.toc .d { display: block; color: #555; font-size: 14px; margin-top: 2px; }
 <h1>If you believe sex determines gender</h1>
 <p class="sub">Taking the gamete definition seriously and applying it consistently.</p>
 
-</head>
-<body>
-<div class="page">
-
-  
-  <div class="subtitle">A walk through your own definitions and what they actually require of you.</div>
+<div class="subtitle">A walk through your own definitions and what they actually require of you.</div>
 
   <div class="infobox">
     <p>Assuming your belief is:</p>
@@ -273,7 +214,6 @@ ul.toc .d { display: block; color: #555; font-size: 14px; margin-top: 2px; }
   <hr>
 
   
-</div>
 </div>
 </body>
 </html>

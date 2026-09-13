@@ -5,84 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Definitions</title>
 <style>
-  * { box-sizing: border-box; }
+  :root {
+    --ink: #1a1a1a;
+    --soft: #5c5c5c;
+    --faint: #8a8a8a;
+    --rule: #e6e2dc;
+    --paper: #fbfaf8;
+    --accent: #7a5c3e;
+    --accent-soft: #f3ede5;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    padding: 24px 16px;
-    background: #ffffff;
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-  }
-  .card {
-    width: 100%;
-    max-width: 460px;
-  }
-  .identifying-box {
-    background: #f4f5f7;
-    border-left: 4px solid #1f2733;
-    padding: 18px 20px;
-    margin-bottom: 26px;
-  }
-  .identifying-box h2 {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
     font-size: 18px;
-    margin: 0 0 10px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
-  .identifying-box p {
-    font-size: 15px;
-    line-height: 1.55;
-    margin: 0;
+  .page { max-width: 680px; margin: 0 auto; padding: 56px 28px 96px; }
+  .nav { font-size: 14px; letter-spacing: 0.02em; margin-bottom: 44px; }
+  .nav a { color: var(--faint); text-decoration: none; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  h1 {
+    font-size: 38px; line-height: 1.18; font-weight: 400; letter-spacing: -0.015em;
+    margin-bottom: 14px; color: #111;
   }
-  .entry {
-    margin-bottom: 24px;
+  .sub { color: var(--soft); font-size: 17px; line-height: 1.6; margin-bottom: 40px; font-style: italic; }
+  h1 + .sub { margin-top: -4px; }
+  h2 {
+    font-size: 15px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent); margin: 52px 0 18px; padding-bottom: 9px;
+    border-bottom: 1px solid var(--rule);
   }
-  .entry p.term {
-    font-size: 16px;
-    line-height: 1.55;
-    margin: 0;
+  h3 { font-size: 21px; font-weight: 600; margin: 34px 0 10px; letter-spacing: -0.01em; }
+  p { margin-bottom: 19px; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  .term { margin: 0 0 30px; }
+  .term b { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+  .card {
+    background: #fff; border: 1px solid var(--rule); border-radius: 3px;
+    padding: 26px 30px; margin: 0 0 42px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 6px 20px rgba(0,0,0,0.035);
   }
-  .quote {
-    border-left: 3px solid #c7cad1;
-    padding-left: 14px;
-    margin: 10px 0 0 2px;
+  .card h3 { margin-top: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  .aside {
+    border-left: 2px solid var(--accent-soft); padding: 2px 0 2px 20px;
+    color: var(--soft); font-size: 16.5px; line-height: 1.65; margin: 0 0 30px;
   }
-  .quote p {
-    font-size: 13.5px;
-    line-height: 1.55;
-    color: #5b6472;
-    margin: 0;
+  .aside p:last-child { margin-bottom: 0; }
+  ol, ul { margin: 0 0 24px 22px; }
+  li { margin-bottom: 11px; padding-left: 4px; }
+  ol li::marker { color: var(--faint); }
+  .toc { list-style: none; margin: 0; padding: 0; }
+  .toc li { margin-bottom: 30px; padding-left: 0; }
+  .toc a { color: var(--ink); text-decoration: none; font-size: 22px; letter-spacing: -0.01em;
+           border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .toc .d { display: block; color: var(--soft); font-size: 16px; line-height: 1.6; margin-top: 6px; }
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 52px 0; }
+  .foot { color: var(--faint); font-size: 14px; line-height: 1.6; margin-top: 60px;
+          padding-top: 22px; border-top: 1px solid var(--rule); }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .page { padding: 36px 20px 72px; }
+    h1 { font-size: 30px; }
   }
 </style>
 </head>
 <body>
-<div class="page"><p style="font-size:14px;margin-bottom:14px;"><a href="/" style="color:#36c;text-decoration:none;">&larr; All pages</a></p></div>
+<div class="page">
+<p class="nav"><a href="/">&larr; All pages</a></p>
+<h1>Definitions</h1>
+<p class="sub">The terms used across these pages, stated plainly.</p>
+
   <div class="card">
-
-    <div class="identifying-box">
-      <h2>Identifying</h2>
-      <p>Willingly associating with a gender category, whether from birth combined with never having a reason to leave, which is around 99% of people in the category, or associating with it to treat gender dysphoria, or to pursue gender euphoria.</p>
-    </div>
-
-    <div class="entry">
-      <p class="term"><b>A woman</b> is an adult human person identifying with the female category, regardless of assigned sex at birth.</p>
-      <div class="quote">
-        <p>The vast majority of people in the category were born into the category and never had a reason to leave, while a minority crossed over from another category, some to treat gender dysphoria, others in pursuit of gender euphoria, a felt sense of rightness in the new category. This explanation applies to the other definitions below as well.</p>
-      </div>
-    </div>
-
-    <div class="entry">
-      <p class="term"><b>A man</b> is an adult human person identifying with the male category, regardless of assigned sex at birth.</p>
-    </div>
-
-    <div class="entry">
-      <p class="term"><b>A girl</b> is a young human person identifying with the female category, regardless of assigned sex at birth.</p>
-    </div>
-
-    <div class="entry" style="margin-bottom: 0;">
-      <p class="term"><b>A boy</b> is a young human person identifying with the male category, regardless of assigned sex at birth.</p>
-    </div>
-
+    <h3>Identifying</h3>
+    <p>Willingly associating with a gender category. Either from birth, combined with never having had a reason to leave, which describes around 99% of people in any category. Or associating with it to treat gender dysphoria, or in pursuit of gender euphoria.</p>
   </div>
+
+  <p class="term"><b>A woman</b> is an adult human person identifying with the female category, regardless of assigned sex at birth.</p>
+
+  <div class="aside">
+    <p>The vast majority of people in the category were born into it and never had a reason to leave. A minority crossed over from another category, some to treat gender dysphoria, others in pursuit of gender euphoria, a felt sense of rightness in the new category. This applies to each of the definitions below as well.</p>
+  </div>
+
+  <p class="term"><b>A man</b> is an adult human person identifying with the male category, regardless of assigned sex at birth.</p>
+
+  <p class="term"><b>A girl</b> is a young human person identifying with the female category, regardless of assigned sex at birth.</p>
+
+  <p class="term"><b>A boy</b> is a young human person identifying with the male category, regardless of assigned sex at birth.</p>
+
+</div>
 </body>
 </html>
