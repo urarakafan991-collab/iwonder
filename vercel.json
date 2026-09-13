@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/sex-final", "destination": "/", "permanent": true },
+    { "source": "/sex-final.html", "destination": "/", "permanent": true }
+  ]
+}
