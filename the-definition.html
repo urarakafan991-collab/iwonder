@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>If you believe sex determines gender</title>
+    <meta name="description" content="Taking the gamete definition of sex seriously and applying it consistently, through CAIS and PMDS, to what it actually produces.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
     :root {
@@ -80,7 +81,8 @@
     .framework-2 .framework-explanation { border-left:2px solid #2563eb; }
     .box { background:#f8fafc; padding:12px 14px; border-radius:8px; border:1px solid #f1f5f9; margin:14px 0 18px; }
     .box.pink { border-left:3px solid var(--pink); } .box.blue { border-left:3px solid var(--blue); }
-    .box h4 { font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; font-weight:700; }
+    .box h4 { font-size:0.85rem; margin-bottom:8px; font-weight:700; line-height:1.4; }
+    .box h4.tag { font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; }
     .box.pink h4 { color:var(--pink-deep); } .box.blue h4 { color:var(--blue-deep); }
     .box p { font-size:0.88rem; line-height:1.5; margin-bottom:8px; } .box p:last-child { margin-bottom:0; }
     .box ol { margin:0 0 0 18px; } .box ol li { font-size:0.88rem; line-height:1.5; margin-bottom:8px; }
@@ -97,6 +99,15 @@
     .index-card .t { font-size:1.05rem; font-weight:700; letter-spacing:-0.3px; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
     .index-card .d { font-size:0.85rem; color:var(--text-muted); line-height:1.45; }
     .index-card.pink .icon { color:var(--pink); } .index-card.blue .icon { color:var(--blue); }
+    .page-nav { display:flex; justify-content:space-between; gap:12px; margin-top:18px; }
+    .page-nav a { flex:1; display:block; background:var(--card-bg); border-radius:var(--border-radius); box-shadow:var(--shadow);
+                  border:1px solid rgba(255,255,255,0.8); padding:14px 16px; text-decoration:none; color:inherit; transition:box-shadow .15s; }
+    .page-nav a:hover { box-shadow:0 14px 30px -8px rgba(0,0,0,0.09); }
+    .page-nav .k { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#94a3b8; margin-bottom:4px; }
+    .page-nav .v { font-size:0.9rem; font-weight:600; }
+    .page-nav a.next { text-align:right; }
+    .page-nav a.next .v { color:var(--blue); } .page-nav a.prev .v { color:var(--pink-deep); }
+    .center-page { min-height:calc(100vh - 84px); display:flex; flex-direction:column; justify-content:center; }
     </style>
 </head>
 <body>
@@ -109,7 +120,7 @@
   <div class="card prose">
 
   <div class="box pink">
-    <h4>Assuming your belief is</h4>
+    <h4 class="tag">Assuming your belief is</h4>
     <p>A woman is an adult female person. A man is an adult male person.</p>
     <p>Female means someone whose internal reproductive system is arranged around the production of eggs. Male means someone whose internal reproductive system is arranged around the production of sperm.</p>
   </div>
@@ -215,6 +226,7 @@
   </div>
 
   </div>
+  <div class="page-nav"><span></span><a class="next" href="/objections"><div class="k">Next</div><div class="v">Common objections &rarr;</div></a></div>
 </div>
 </body>
 </html>
