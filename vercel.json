@@ -2,7 +2,35 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/sex-final", "destination": "/", "permanent": true },
-    { "source": "/sex-final.html", "destination": "/", "permanent": true }
+    {
+      "source": "/sex-final",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sex-final.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feminism",
+      "destination": "/womens-rights",
+      "permanent": true
+    },
+    {
+      "source": "/feminism-arguments",
+      "destination": "/womens-rights-then",
+      "permanent": true
+    },
+    {
+      "source": "/feminism-claims",
+      "destination": "/womens-rights-now",
+      "permanent": true
+    },
+    {
+      "source": "/feminism-disagreement",
+      "destination": "/womens-rights-disagreement",
+      "permanent": true
+    }
   ]
 }
