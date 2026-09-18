@@ -128,6 +128,12 @@
     .page-nav a.next { text-align:right; }
     .page-nav a.next .v { color:var(--blue); } .page-nav a.prev .v { color:var(--pink-deep); }
     .center-page { min-height:calc(100vh - 84px); display:flex; flex-direction:column; justify-content:center; }
+
+    :target { scroll-margin-top: 20px; }
+    h2:target, h3:target { background:linear-gradient(90deg,#fce7f3 0%,rgba(252,231,243,0) 70%);
+                           border-radius:6px; padding-left:10px; margin-left:-10px; }
+    li:target { background:linear-gradient(90deg,#dbeafe 0%,rgba(219,234,254,0) 80%);
+                border-radius:6px; padding:6px 10px; margin-left:-10px; }
     </style>
 </head>
 <body>

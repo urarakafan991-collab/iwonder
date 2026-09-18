@@ -128,6 +128,12 @@
     .page-nav a.next { text-align:right; }
     .page-nav a.next .v { color:var(--blue); } .page-nav a.prev .v { color:var(--pink-deep); }
     .center-page { min-height:calc(100vh - 84px); display:flex; flex-direction:column; justify-content:center; }
+
+    :target { scroll-margin-top: 20px; }
+    h2:target, h3:target { background:linear-gradient(90deg,#fce7f3 0%,rgba(252,231,243,0) 70%);
+                           border-radius:6px; padding-left:10px; margin-left:-10px; }
+    li:target { background:linear-gradient(90deg,#dbeafe 0%,rgba(219,234,254,0) 80%);
+                border-radius:6px; padding:6px 10px; margin-left:-10px; }
     </style>
 </head>
 <body>
@@ -142,11 +148,11 @@
   <p>Some people ask: if gender can be transitioned, why not race? Here's the actual difference.</p>
 
   <ol>
-    <li>Gender dysphoria is a recognized medical condition involving clinically significant distress from a mismatch between gender identity and sex assigned at birth. There is no recognized medical condition of "race dysphoria."</li>
+    <li id="r1">Gender dysphoria is a recognized medical condition involving clinically significant distress from a mismatch between gender identity and sex assigned at birth. There is no recognized medical condition of "race dysphoria."</li>
   </ol>
 
   <ol start="2">
-    <li>Gender identity develops through prenatal hormone exposure interacting with genetic factors, with the brain and body developing along different trajectories. Twin studies, prenatal hormone research and brain imaging all point to it. There is no equivalent process proposed for race, because ancestry isn't a system that develops in the body at all. There is nothing that could have gone differently.</li>
+    <li id="r2">Gender identity develops through prenatal hormone exposure interacting with genetic factors, with the brain and body developing along different trajectories. Twin studies, prenatal hormone research and brain imaging all point to it. There is no equivalent process proposed for race, because ancestry isn't a system that develops in the body at all. There is nothing that could have gone differently.</li>
   </ol>
 
   <div class="box blue">
@@ -156,9 +162,9 @@
   </div>
 
   <ol start="3">
-    <li>For adults, gender-affirming care is the recognized standard treatment for this condition, backed by every major medical body in the United States, and reported regret rates are consistently low. No alternative approach has been shown to produce better outcomes. (The separate argument about care for under-18s doesn't bear on any of this, which is about adults.) There is no equivalent treatment for race, because there's no condition it would be treating.</li>
-    <li>Gender identity has documented neurobiological correlates. Race is a social construct based on ancestry and physical traits, with no neurological or hormonal basis behind it.</li>
-    <li>Many sex characteristics are biologically modifiable through medical intervention, because the hormonal pathways involved already exist in the body. Genetic ancestry is fixed and cannot be altered by anything.</li>
+    <li id="r3">For adults, gender-affirming care is the recognized standard treatment for this condition, backed by every major medical body in the United States, and reported regret rates are consistently low. No alternative approach has been shown to produce better outcomes. (The separate argument about care for under-18s doesn't bear on any of this, which is about adults.) There is no equivalent treatment for race, because there's no condition it would be treating.</li>
+    <li id="r4">Gender identity has documented neurobiological correlates. Race is a social construct based on ancestry and physical traits, with no neurological or hormonal basis behind it.</li>
+    <li id="r5">Many sex characteristics are biologically modifiable through medical intervention, because the hormonal pathways involved already exist in the body. Genetic ancestry is fixed and cannot be altered by anything.</li>
   </ol>
 
   <p>Gender transition is a recognized medical treatment for a documented condition with real biological underpinnings. "Race transition" has no medical basis, no recognized condition, and no biological mechanism behind it.</p>
